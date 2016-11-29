@@ -154,7 +154,7 @@ def main():
     service = discovery.build('gmail', 'v1', http=http)
 
     #Some Validation of user Input:
-    if(len(GiverList) != len(EmailDic) and set(EmailDic.iterkeys()) == set(GiverList)):
+    if(len(GiverList) != len(EmailDic) or set(EmailDic.iterkeys()) != set(GiverList)):
         print("You forgot to give everyone an email address")
         return
     else:
