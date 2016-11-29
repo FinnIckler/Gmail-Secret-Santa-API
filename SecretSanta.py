@@ -98,7 +98,7 @@ def changeReceiver(mail,newmail):
     body = body.replace(mail,newmail,1)
     return {'raw': base64.urlsafe_b64encode(body)}
 
-def sendSecretSantaMail():
+def sendSecretSantaMail(service):
     """Given a List of People and a Dictionary of email adresses corrosponding
     to the people, this programm sends all the people their Secret Santa Partner
     via google Mail
@@ -158,7 +158,7 @@ def main():
         print("You forgot to give everyone an email address")
         return
     else:
-        sendSecretSantaMail()
+        sendSecretSantaMail(service)
         print("All Mail send")
 
 
