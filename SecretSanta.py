@@ -108,9 +108,9 @@ def sendSecretSantaMail():
         rand = random.randint(0, len(ReceiverList) -1)
         while value == ReceiverList[rand]:
             rand = random.randint(0, len(ReceiverList) -1)
-        SecretSanta[value] = ReceiverList[rand]
+        SecretSantaDic[value] = ReceiverList[rand]
         ReceiverList.remove(ReceiverList[rand])
-    for key, value in SecretSanta.iteritems():
+    for key, value in SecretSantaDic.iteritems():
         message = create_message(MYMAIL,EmailDic[key],"You are the Secret Santa for",value)
         with open("messageTo"+EmailDic[key]+".txt","wb") as f:
             f.write(message["raw"])
