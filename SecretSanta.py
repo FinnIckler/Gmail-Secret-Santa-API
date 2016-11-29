@@ -90,7 +90,7 @@ def changeReceiver(mail,newmail):
     """Changes the Receiver Email
 
     Args:
-        mail: mail Adsress of Receiver
+        mail: mail Adress of Receiver
         newmail: mail Adress which it should be changed to
     """
     message = mailRetrieval(mail)
