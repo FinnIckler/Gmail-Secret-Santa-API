@@ -3,10 +3,8 @@ import httplib2
 import os
 import random
 
-from apiclient import discovery
-from apiclient import errors
-from oauth2client import client
-from oauth2client import tools
+from apiclient import discovery,errors
+from oauth2client import client,tools
 from oauth2client.file import Storage
 from email.mime.text import MIMEText
 from copy import deepcopy
